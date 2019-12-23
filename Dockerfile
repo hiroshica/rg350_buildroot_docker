@@ -6,7 +6,9 @@ FROM dev as builder
 RUN git clone https://github.com/tonyjih/RG350_buildroot /src/buildroot
 COPY rg350_defconfig /src/buildroot/configs/
 WORKDIR /src/buildroot
-RUN make rg350_defconfig && make
+RUN make rg350_defconfig
+RUN make source
+RUN make
 
 FROM dev
 WORKDIR /root
