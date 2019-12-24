@@ -1,0 +1,4 @@
+alias dockkillall='docker system prune'
+alias dockrun='docker run -it --name "ubuntu" hiroshica/ubuntu  /bin/bash'
+alias dockstop='docker stop ubuntu'
+alias dockupdate='docker commit ubuntu hiroshica/ubuntu'
